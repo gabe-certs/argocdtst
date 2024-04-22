@@ -1,0 +1,13 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: application-from-scratch
+spec:
+  source:
+    path: v03-argocd-applications/helm/nginx
+    repoURL: 'https://github.com/gabe-certs/argocd-tutorial.git'
+    targetRevision: main
+  destination:
+    namespace: default
+    name: in-cluster
+  project: default
