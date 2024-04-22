@@ -4,10 +4,10 @@ metadata:
   name: application-from-scratch
 spec:
   source:
-    path: application.yml
+    path: nginx
     repoURL: 'https://github.com/gabe-certs/argocdtst.git'
     targetRevision: main
   destination:
     namespace: default
-    name: in-cluster
+    server: https://kubernetes.default.svcr
   project: default
