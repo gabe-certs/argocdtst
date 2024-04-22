@@ -5,8 +5,8 @@ metadata:
 spec:
   source:
     helm:
-      releaseName: application-from-helm
       values: |
+        releaseName: application-from-helm
         replicaCount: 2
         path: nginx
         repoURL: 'https://github.com/gabe-certs/argocdtst.git'
