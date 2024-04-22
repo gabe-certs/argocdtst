@@ -6,10 +6,12 @@ spec:
   source:
     helm:
       releaseName: application-from-helm
-    path: nginx
-    repoURL: 'https://github.com/gabe-certs/argocdtst.git'
-    targetRevision: main
-  destination:
-    namespace: default
-    server: https://kubernetes.default.svc
-  project: default
+      values: |
+        replicaCount: 2
+        path: nginx
+        repoURL: 'https://github.com/gabe-certs/argocdtst.git'
+        targetRevision: main
+      destination:
+        namespace: default
+        server: https://kubernetes.default.svc
+      project: default
