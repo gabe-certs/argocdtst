@@ -4,6 +4,8 @@ metadata:
   name: application-from-scratch
 spec:
   source:
+    helm:
+      releaseName: application-from-helm
     path: nginx
     repoURL: 'https://github.com/gabe-certs/argocdtst.git'
     targetRevision: main
