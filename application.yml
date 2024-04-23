@@ -4,13 +4,13 @@ metadata:
   name: application-from-scratch
 spec:
   source:
+    path: nginx
     repoURL: 'https://github.com/gabe-certs/argocdtst.git'
     targetRevision: main
     helm:
       releaseName: application-from-helm
       values: |
         replicaCount: 2
-        path: nginx
   destination:
     namespace: default
     server: https://kubernetes.default.svc
