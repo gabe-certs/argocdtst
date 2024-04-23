@@ -9,7 +9,6 @@ spec:
     targetRevision: main
     helm:
       releaseName: application-from-helm
-      values: |
       valueFiles:
         - custom-values.yaml
   destination:
