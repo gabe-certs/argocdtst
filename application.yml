@@ -10,7 +10,8 @@ spec:
     helm:
       releaseName: application-from-helm
       values: |
-        replicaCount: 2
+      valueFiles:
+        - custom-values.yaml
   destination:
     namespace: default
     server: https://kubernetes.default.svc
